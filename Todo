@@ -1,6 +1,7 @@
 Password mechanic
 Update index
 FAQ Maybe
+Stop "X" Button
 
 Routes:
 2_12
@@ -8,7 +9,6 @@ Routes:
 2_113
 2_1111
 New 2_2
-1_21
 1_22
 
 maybe delete main.css
