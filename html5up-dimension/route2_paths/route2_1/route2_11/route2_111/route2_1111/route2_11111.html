@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+    
+	<head>
+		<title>Echoes of the Forgotten</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../../../assets/css/mainch1.css" />
+		<noscript><link rel="stylesheet" href="../../../../../assets/css/noscript.css" /></noscript>
+
+	</head>
+
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>A Narrow Escape</h1>
+								<p>It pounds on the door, taking its time with each strike.</p>
+                                
+                                <p>The calm, terrifying tempo of the clang of metal makes you twitch in fear each impact.</p>
+
+                                <p>Your hands scramble over the keys, bits of dust scattering as you sift through the glitchy interface.</p>
+
+                                <p>You click through files and programs, landing on the operations software.</p>
+
+                                <p></p>
+
+                                <p>In what seemed like hours, you eventually find the system override. Words appear in big, bold type:</p>
+
+                                <h2>ENTER ACCESS CODE: █ █ █ █</h2>
+
+                                <p></p>
+
+                                <p>Wracking your brain, you try and find any information from your haunting memories of this place, looking for a 4-digit code.</p>
+
+                                <p>Where could this have been? On a secret note? A security handbook? One of the thousands of flickering monitors?</p>
+
+                                <p>Your trembling hands are barely able to hit the keypad as you enter in the code and hold your breath.</p>
+
+                                <p>For a moment it goes quiet, as if the monster too is reveling in the suspense.</p>
+
+                                <p></p>
+
+                                <input type="text" id="passcode" name="passcode">
+
+                                <div id="ending">
+                                    <p></p>
+                                    <h1>Spectre in the Bright Night</h1>
+                                    <p>You let out a shivering breath as the hatch clicks open.</p>
+
+                                    <p>Stumbling to the door, you yank it open and throw yourself out into the dark, open world.</p>
+
+                                    <p>Behind you, you hear the thump of heavy metal falling into place.</p> 
+
+                                    <p>The echoes of the monster's voice linger in your head.</p>
+
+                                    <p>For now, the threat is contained.</p>
+                                    
+                                    <p>You sit there in the soft grass for what feels like an hour, listening to your ragged breaths.</p>
+
+                                    <p>Weakly, you get to your feet. Looking out at the barren expanse, you know your journey is far from over.</p>
+
+                                    <p>You walk in slow, exhausted steps in a random direction, hoping to find sanctuary in a vehicle or small town.</p>
+
+                                    <p>Your mind swirls with loud, unignorable questions.</p>
+
+                                    <p>The monster has been contained for now, but the relentless hand of time will eventually come to set it free.</p>
+
+                                    <p>Sitting down in a small shelter made from rocks and leaves, you drift in to a restless sleep.</p>
+
+                                    <h1>An END.</h1>
+                                </div>
+
+                                <div id="bad-ending">
+                                    <p></p>
+
+                                    <h1>No One Can Hear You</h1>
+                                    <p>The screen blares red.</p>
+
+                                    <p>You try again and again, practically clawing at the keypad, screaming at it to set you free.</p>
+
+                                    <p>The monster watches from behind.</p>
+
+                                    <p>Even in its scrambled face, you see its sadistic glee.</p>
+
+                                    <p>You crumple down beside the control terminal. Nothing more can be done.</p>
+
+                                    <p>Looking at it, you smile.</p>
+
+                                    <p>The door bursts open.</p>
+
+                                    <p>Before you could blink, it was already around your neck.</p>
+
+                                    <p>You don't scream. The monster doesn't get that satisfaction.</p>
+
+                                    <p>Liberating pain fills your senses as you crumple down.</p>
+
+                                    <h1>BAD END</h1>
+                                </div>
+
+                                <style>
+                                    #ending {
+                                        opacity: 0;          /* Start invisible */
+                                        height: 0;          /* Start with no height */
+                                        overflow: hidden;   /* Hide content when height is 0 */
+                                        transition: opacity 3s ease-in-out, height 3s ease-in-out; 
+                                    }
+                                
+                                    #ending.show-ending {
+                                        opacity: 1;         /* Fade to visible */
+                                        height: auto;       /* Expand to natural height */
+                                    }
+                                
+                                    #bad-ending {
+                                        opacity: 0;          /* Start invisible */
+                                        height: 0;          /* Start with no height */
+                                        overflow: hidden;   /* Hide content when height is 0 */
+                                        transition: opacity 3s ease-in-out, height 3s ease-in-out;
+                                    }
+                                
+                                    #bad-ending.show-bad-ending {
+                                        opacity: 1;         /* Fade to visible */
+                                        height: auto;       /* Expand to natural height */
+                                    }
+                                </style>
+                                
+                                <script>
+                                    const inputElement = document.getElementById("passcode");
+                                
+                                    inputElement.addEventListener("keypress", function(event) {
+                                        if (event.key === "Enter") {
+                                            event.preventDefault();
+                                            passcodeChecker();
+                                        }
+                                    });
+                                
+                                    function passcodeChecker() {
+                                        const x = document.getElementById("passcode").value;
+                                        const ending = document.getElementById('ending');
+                                        const badEnding = document.getElementById('bad-ending');
+                                
+                                        // Remove existing classes to reset page
+                                        ending.classList.remove('show-ending');
+                                        badEnding.classList.remove('show-bad-ending');
+                                
+                                        // Add appropriate ending based on user input
+                                        if (x === "7139") {
+                                            ending.classList.add('show-ending');
+                                        } else {
+                                            badEnding.classList.add('show-bad-ending');
+                                        }
+                                    }
+                                </script>
+							</div>
+						</div>
+						<nav>
+                            <ul>
+                                <li><a href="../../../../../index.html">Home</a></li>
+                            </ul>
+                        </nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; WHS Neil Raman, George Wang, Andy Zhou Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="../../../../../assets/js/jquery.min.js"></script>
+			<script src="../../../../../assets/js/browser.min.js"></script>
+			<script src="../../../../../assets/js/breakpoints.min.js"></script>
+			<script src="../../../../../assets/js/util.js"></script>
+			<script src="../../../../../assets/js/main.js"></script>
+            
+	</body>
+</html>
