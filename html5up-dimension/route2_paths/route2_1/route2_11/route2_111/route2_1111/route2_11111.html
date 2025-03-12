@@ -23,6 +23,7 @@
 						</div>
 						<div class="content">
 							<div class="inner">
+                                <!-- Story Content -->
 								<h1>A Narrow Escape</h1>
 								<p>It pounds on the door, taking its time with each strike.</p>
                                 
@@ -53,6 +54,7 @@
                                 <input type="text" id="passcode" name="passcode">
 
                                 <div id="ending">
+                                    <!-- If users enters correct passcode -->
                                     <p></p>
                                     <h1>Spectre in the Bright Night</h1>
                                     <p>You let out a shivering breath as the hatch clicks open.</p>
@@ -81,6 +83,7 @@
                                 </div>
 
                                 <div id="bad-ending">
+                                    <!-- If user enters incorrect passcode -->
                                     <p></p>
 
                                     <h1>No One Can Hear You</h1>
@@ -108,26 +111,26 @@
                                 </div>
 
                                 <style>
-                                    #ending {
+                                    #ending { /* Defaults ending text to hidden */
                                         opacity: 0;          /* Start invisible */
                                         height: 0;          /* Start with no height */
                                         overflow: hidden;   /* Hide content when height is 0 */
                                         transition: opacity 3s ease-in-out, height 3s ease-in-out; 
                                     }
                                 
-                                    #ending.show-ending {
+                                    #ending.show-ending { /* Shows ending once added */
                                         opacity: 1;         /* Fade to visible */
                                         height: auto;       /* Expand to natural height */
                                     }
                                 
-                                    #bad-ending {
+                                    #bad-ending { /* Defaults ending text to hidden */
                                         opacity: 0;          /* Start invisible */
                                         height: 0;          /* Start with no height */
                                         overflow: hidden;   /* Hide content when height is 0 */
                                         transition: opacity 3s ease-in-out, height 3s ease-in-out;
                                     }
                                 
-                                    #bad-ending.show-bad-ending {
+                                    #bad-ending.show-bad-ending { /* Shows ending once added */
                                         opacity: 1;         /* Fade to visible */
                                         height: auto;       /* Expand to natural height */
                                     }
@@ -137,7 +140,7 @@
                                     const inputElement = document.getElementById("passcode");
                                 
                                     inputElement.addEventListener("keypress", function(event) {
-                                        if (event.key === "Enter") {
+                                        if (event.key === "Enter") { // Runs password checker when enter is pressed
                                             event.preventDefault();
                                             passcodeChecker();
                                         }
